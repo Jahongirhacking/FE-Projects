@@ -1,0 +1,1236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --apple: #d7d7d7;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+*{
+    box-sizing: unset;
+}
+
+::-webkit-scrollbar{
+    background-color: #323233;
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--apple);
+    border-radius: 10px;
+}
+
+.fixed-bar{
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.status-info{
+    background-color: #444;
+    padding: 12px;
+}
+
+.status-info>p{
+    width: fit-content;
+    margin: auto;
+    color: white;
+    font-size: 13px;
+}
+
+/*Navbar*/
+.navbar{
+    padding: 10px 22px;
+    background: rgba( 0, 0, 0, 0.8 );
+    backdrop-filter: blur( 8.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
+}
+
+.wrapper{
+    display: flex;
+    width: 65%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar>.wrapper>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    margin-left: 60px;
+    padding: 0;
+}
+
+.navbar>.wrapper>ul>li>a{
+    text-decoration: none;
+    color: var(--apple);
+    font-size: 14px;
+    transition: 0.3s ease;
+    transition-property: color;
+}
+
+.navbar>.wrapper>ul>li>a:hover{
+    color: white;
+}
+
+li.apple-logo>a>i:hover{
+    color: white;
+}
+
+li.apple-logo{
+    display: block;
+}
+
+li.apple-logo>a>i{
+    text-decoration: none;
+    color: var(--apple);
+    font-size: 20px;
+    transition: 0.3s ease;
+    transition-property: color;
+}
+
+/*header*/
+
+#header{
+    position: relative;
+    margin-top: 80px;
+    height: 540px;
+    width: 100%;
+    background-image: url("../img/iphone_12.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* #header>a{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+#header>div.about{
+    width: fit-content;
+    margin: auto;
+    padding-top: 40px;
+    text-align: center;
+}
+
+#header>div.about>*{
+    margin: auto;
+    padding: 0;
+    width: fit-content;
+}
+
+#header>div.about>h1{
+    font-size: 3.5em;
+    color: black;
+}
+
+#header>div.about>p{
+    font-size: 21pt;
+    margin-top: 2px;
+    color: #323233;
+    margin-bottom: 13px;
+}
+
+#header>div.about>a{
+    font-size: 16pt;
+    text-decoration: none;
+    color: #217BD0;
+}
+
+#header>div.about>a:hover{
+    text-decoration: underline;
+}
+
+#header>div.about>a>i{
+    font-size: 10pt;
+}
+
+/*Ipad pro*/
+
+.ipad-pro{
+    position: relative;
+    margin-top: 20px;
+    height: 620px;
+    width: 100%;
+    background-image: url("../img/ipad_pro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .ipad-pro>a{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+.ipad-pro>div.about{
+    width: fit-content;
+    margin: auto;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.ipad-pro>div.about>*{
+    margin: auto;
+    padding: 0;
+    width: fit-content;
+}
+
+.ipad-pro>div.about>h1{
+    font-size: 3.5em;
+    color: white;
+}
+
+.ipad-pro>div.about>p{
+    font-size: 21pt;
+    margin-top: 2px;
+    color: white;
+    margin-bottom: 13px;
+}
+
+.ipad-pro>div.about>a{
+    font-size: 16pt;
+    text-decoration: none;
+    color: #217BD0;
+}
+
+.ipad-pro>div.about>a:hover{
+    text-decoration: underline;
+}
+
+.ipad-pro>div.about>a>i{
+    font-size: 10pt;
+}
+
+/*Hero iMac*/
+
+.hero-imac{
+    position: relative;
+    margin-top: 20px;
+    height: 620px;
+    width: 100%;
+    background-image: url("../img/hero_imac.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* hero-imac>a{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+.hero-imac>div.about{
+    width: fit-content;
+    margin: auto;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.hero-imac>div.about>*{
+    margin: auto;
+    padding: 0;
+    width: fit-content;
+}
+
+.hero-imac>div.about>h1{
+    font-size: 3.5em;
+    color: black;
+}
+
+.hero-imac>div.about>p{
+    font-size: 21pt;
+    margin-top: 2px;
+    color: #323233;
+    margin-bottom: 13px;
+}
+
+.hero-imac>div.about>a{
+    font-size: 16pt;
+    text-decoration: none;
+    color: #217BD0;
+}
+
+.hero-imac>div.about>a:hover{
+    text-decoration: underline;
+}
+
+.hero-imac>div.about>a>i{
+    font-size: 10pt;
+}
+
+/* Card Container */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.container>.card{
+    position: relative;
+    width: 48%;
+    height: 580px;
+    background-image: url("../img/iphone_12_pro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+.container>.card.c2{
+    background-image: url("../img/promo_watch.jpg");
+}
+
+.container>.card.c3{
+    background-image: url("../img/promo_airtag.jpg");
+}
+
+.container>.card.c4{
+    background-image: url("../img/promo_arcade.jpg");
+}
+
+.container>.card.c6{
+    background-image: url("../img/tile_greyhound.jpg");
+}
+
+
+.container>.card>.about{
+    width: fit-content;
+    margin: auto;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.container>.card>.about>*{
+    margin: auto;
+    padding: 0;
+    width: fit-content;
+}
+
+.container>.card>div.about>h1{
+    font-size: 2em;
+    color: white;
+}
+
+.container>.c3>div.about>h1{
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+}
+
+.container>.c4>div.about>h1{
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+}
+
+.container>.c5>div.about>h1{
+    font-size: 2.5em;
+    color: rgb(0, 0, 0);
+}
+
+.container>.c6>div.about>h1{
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+}
+
+.container>.card>div.about>em{
+    font-size: 11pt;
+    margin-top: 25px;
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.container>.card>div.about>p{
+    font-size: 15pt;
+    margin-top: 15px;
+    color: white;
+    margin-bottom: 13px;
+}
+
+.container>.c3>div.about>p{
+    color: #444
+}
+
+.container>.c4>div.about>p{
+    color: #444
+}
+
+.container>.c5>div.about>p{
+    color: #444;
+    width: 300px;
+}
+
+.container>.c6>div.about>p{
+    color: rgb(255, 255, 255)
+}
+
+.container>.card>div.about>a{
+    font-size: 14pt;
+    text-decoration: none;
+    color: #217BD0;
+}
+
+.container>.card>div.about>div{
+    color: #217BD0;
+}
+
+.container>.card>div.about>div>a{
+    font-size: 14pt;
+    text-decoration: none;
+    color: #217BD0;
+}
+
+.container>.card>div.about>div>.try{
+    margin-left: 30px;
+}
+
+.container>.c6>div.about>div, .container>.c6>div.about>div>a{
+    color: white;
+}
+
+.container>.card>div.about>a:hover, .container>.card>div.about>div>a:hover{
+    text-decoration: underline;
+}
+
+.container>.card>div.about>a>i{
+    font-size: 10pt;
+}
+
+.container>.c5{
+    background-image: none;
+}
+
+.container>.c5>.back-img{
+    background-image: url('../img/tile.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: top;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+}
+
+.container>.c6>div.about{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+}
+
+/* Footer */
+
+footer{
+    padding: 35px 0;
+    background-color: #f5f5f7;
+    width: 100%;
+}
+
+footer>.container{
+    width: 70%;
+    margin: auto;
+}
+
+footer>.container>.wrap-div{
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #b8b8b8;
+}
+
+footer>.container>.wrap-div>*{
+    font-size: 10pt;
+    padding: 0 0 10px;
+    margin: 0;
+    color: #86868b;
+}
+
+
+footer>.container>.wrap-div>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer>.container>.wrap-div>div>ul>li, footer>.container>.wrap-div>div>ul>ul>li{
+    margin-top: 12px;
+}
+
+footer>.container>.wrap-div>div>ul>li>a, footer>.container>.wrap-div>div>ul>ul>li>a{
+    color: #86868b;
+    text-decoration: none;
+}
+
+footer>.container>.wrap-div>div>ul>li>a:hover, footer>.container>.wrap-div>div>ul>ul>li>a:hover{
+    text-decoration: underline;
+}
+
+ul>ul{
+    margin-top: 30px;
+}
+
+footer>.container>.info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer>.container>.info>div{
+    display: flex;
+    align-items: center;
+}
+
+footer>.container>.info>div>p{
+    font-size: 14px;
+    color: #86868b;
+}
+
+footer>.container>.info>div>ul{
+    font-size: 14px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 230px;
+    margin: auto;
+    justify-content: space-between;
+    margin-left: 25px;
+}
+
+footer>.container>.info>div>ul>li>a{
+    font-size: 14px;
+    color: #86868b;
+    text-decoration: none;
+}
+
+footer>.container>.info>div>ul>li>a:hover{
+    text-decoration: underline;
+}
+
+footer>.container>.info>div>ul>.bordered{
+    border-left: 1px solid #b8b8b8;
+    border-right: 1px solid #b8b8b8;
+    padding: 0 10px;
+}
+
+footer>.container>.info>p{
+    font-size: 14px;
+    color: #86868b;
+}
+
+/* Responsive */
+
+@media (min-width: 280px) and (max-width: 375px){
+    .status-info>p {
+        font-size: 9px;
+    }
+
+    .navbar>.wrapper>ul {
+        display: none;
+    }
+
+    #header {
+        height: 240px;
+    }
+
+    #header>div.about {
+        padding-top: 15px;
+    }
+
+    #header>div.about>h1 {
+        font-size: 2.5em;
+    }
+
+    #header>div.about>p {
+        font-size: 13pt;
+        margin-bottom: 6px;
+    }
+
+    #header>div.about>a {
+        font-size: 12pt;
+    }
+
+    /* iPad Pro */
+
+    .ipad-pro {
+        height: 300px;
+    }
+
+    
+    .ipad-pro >div.about {
+        padding-top: 15px;
+    }
+
+    .ipad-pro >div.about>h1 {
+        font-size: 2.5em;
+    }
+
+    .ipad-pro >div.about>p {
+        font-size: 12pt;
+        margin-bottom: 6px;
+    }
+
+    .ipad-pro >div.about>a {
+        font-size: 12pt;
+    }
+
+    /* iMac Hero */
+
+    .hero-imac {
+        height: 284px;
+    }
+
+    .hero-imac>div.about>h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-imac>div.about {
+        padding-top: 0px;
+    }
+
+    .hero-imac>div.about>p {
+        font-size: 13pt;
+    }
+
+    .hero-imac>div.about>a {
+        font-size: 12pt;
+    }
+
+    /* Container Card */
+
+    .container>.card {
+        width: 99%;
+        height: 480px;
+    }
+
+    .container>.c2>.about {
+        padding-top: 27px;
+    }
+
+    .container>.c2>div.about>p {
+        font-size: 12pt;
+        margin-top: 10px;
+    }
+
+    .container>.c2>div.about>a {
+        font-size: 12pt;
+    }
+
+    .container>.c3>div.about>p {
+        font-size: 13pt;
+    }
+
+    .container>.c3>div.about>a {
+        font-size: 12pt;
+    }
+
+    .container>.c4>.about {
+        padding-top: 15px;
+    }
+
+    .container>.c4>div.about>p {
+        font-size: 11pt;
+    }
+
+    .container>.c4>div.about>div>a {
+        font-size: 11pt;
+    }
+
+    .container>.c5>.about {
+        padding-top: 10px;
+        z-index: 2;
+    }
+
+    .container>.c5>div.about>p {
+        font-size: 11pt;
+    }
+
+    .container>.c5>div.about>div>a {
+        font-size: 11pt;
+    }
+
+    .container>.c6>div.about {
+        bottom: 85px;
+    }
+    
+    .container>.c6>div.about>p {
+        font-size: 13pt;
+    }
+
+    .container>.card>div.about>div>a {
+        font-size: 12pt;
+    }
+
+    /* Footer */
+
+    footer>.container>.wrap-div>* {
+        font-size: 6pt;
+    }
+
+    footer>.container {
+        width: 92%;
+    }
+
+    footer>.container>.info>div>p {
+        font-size: 12px;
+    }
+
+    footer>.container>.info>div>ul>li>a {
+        font-size: 11px;
+    }
+
+    footer>.container>.info>div {
+        display: block;
+    }
+
+    footer>.container>.info>p {
+        font-size: 11px;
+    }
+
+    footer>.container>.info {
+        display: block;
+        justify-content: unset;
+    }
+
+    footer>.container>.info>div>ul {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 414px){
+    .status-info>p {
+        font-size: 9px;
+    }
+
+    .navbar>.wrapper>ul {
+        display: none;
+    }
+
+    #header {
+        height: 280px;
+    }
+
+    #header>div.about {
+        padding-top: 15px;
+    }
+
+    #header>div.about>h1 {
+        font-size: 2.5em;
+    }
+
+    #header>div.about>p {
+        font-size: 13pt;
+        margin-bottom: 6px;
+    }
+
+    #header>div.about>a {
+        font-size: 12pt;
+    }
+
+    /* iPad Pro */
+
+    .ipad-pro {
+        height: 300px;
+    }
+
+    
+    .ipad-pro >div.about {
+        padding-top: 15px;
+    }
+
+    .ipad-pro >div.about>h1 {
+        font-size: 2.5em;
+    }
+
+    .ipad-pro >div.about>p {
+        font-size: 12pt;
+        margin-bottom: 6px;
+    }
+
+    .ipad-pro >div.about>a {
+        font-size: 12pt;
+    }
+
+    /* iMac Hero */
+
+    .hero-imac {
+        height: 315px;
+    }
+
+    .hero-imac>div.about>h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-imac>div.about {
+        padding-top: 0px;
+    }
+
+    .hero-imac>div.about>p {
+        font-size: 13pt;
+    }
+
+    .hero-imac>div.about>a {
+        font-size: 12pt;
+    }
+
+    /* Container Card */
+
+    .container>.card {
+        width: 99%;
+        height: 480px;
+    }
+
+    .container>.c2>.about {
+        padding-top: 27px;
+    }
+
+    .container>.c2>div.about>p {
+        font-size: 12pt;
+        margin-top: 10px;
+    }
+
+    .container>.c2>div.about>a {
+        font-size: 12pt;
+    }
+
+    .container>.c3>div.about>p {
+        font-size: 13pt;
+    }
+
+    .container>.c3>div.about>a {
+        font-size: 12pt;
+    }
+
+    .container>.c4>.about {
+        padding-top: 15px;
+    }
+
+    .container>.c4>div.about>p {
+        font-size: 11pt;
+    }
+
+    .container>.c4>div.about>div>a {
+        font-size: 11pt;
+    }
+
+    .container>.c5>.about {
+        padding-top: 10px;
+        z-index: 2;
+    }
+
+    .container>.c5>div.about>p {
+        font-size: 11pt;
+    }
+
+    .container>.c5>div.about>div>a {
+        font-size: 11pt;
+    }
+
+    .container>.c6>div.about {
+        bottom: 85px;
+    }
+    
+    .container>.c6>div.about>p {
+        font-size: 13pt;
+    }
+
+    .container>.card>div.about>div>a {
+        font-size: 12pt;
+    }
+
+    /* Footer */
+
+    footer>.container>.wrap-div>* {
+        font-size: 6pt;
+    }
+
+    footer>.container {
+        width: 92%;
+    }
+
+    footer>.container>.info>div>p {
+        font-size: 12px;
+    }
+
+    footer>.container>.info>div>ul>li>a {
+        font-size: 11px;
+    }
+
+    footer>.container>.info>div {
+        display: block;
+    }
+
+    footer>.container>.info>p {
+        font-size: 11px;
+    }
+
+    footer>.container>.info {
+        display: block;
+        justify-content: unset;
+    }
+
+    footer>.container>.info>div>ul {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 600px){
+    .status-info>p {
+        font-size: 9px;
+    }
+
+    .navbar>.wrapper>ul {
+        display: none;
+    }
+
+    #header {
+        height: 360px;
+    }
+
+    #header>div.about {
+        padding-top: 35px;
+    }
+
+    #header>div.about>h1 {
+        font-size: 2.5em;
+    }
+
+    #header>div.about>p {
+        font-size: 13pt;
+        margin-bottom: 6px;
+    }
+
+    #header>div.about>a {
+        font-size: 12pt;
+    }
+
+    /* iPad Pro */
+
+    .ipad-pro {
+        height: 350px;
+    }
+
+    
+    .ipad-pro >div.about {
+        padding-top: 25px;
+    }
+
+    .ipad-pro >div.about>h1 {
+        font-size: 2.5em;
+    }
+
+    .ipad-pro >div.about>p {
+        font-size: 12pt;
+        margin-bottom: 6px;
+    }
+
+    .ipad-pro >div.about>a {
+        font-size: 12pt;
+    }
+
+    /* iMac Hero */
+
+    .hero-imac {
+        height: 380px;
+    }
+
+    .hero-imac>div.about>h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-imac>div.about {
+        padding-top: 15px;
+    }
+
+    .hero-imac>div.about>p {
+        font-size: 13pt;
+    }
+
+    .hero-imac>div.about>a {
+        font-size: 12pt;
+    }
+
+    /* Container Card */
+
+    .container>.card {
+        width: 99%;
+        height: 480px;
+    }
+
+    .container>.c2>.about {
+        padding-top: 27px;
+    }
+
+    .container>.c2>div.about>p {
+        font-size: 12pt;
+        margin-top: 10px;
+    }
+
+    .container>.c2>div.about>a {
+        font-size: 12pt;
+    }
+
+    .container>.c3>div.about>p {
+        font-size: 13pt;
+    }
+
+    .container>.c3>div.about>a {
+        font-size: 12pt;
+    }
+
+    .container>.c4>.about {
+        padding-top: 15px;
+    }
+
+    .container>.c4>div.about>p {
+        font-size: 11pt;
+    }
+
+    .container>.c4>div.about>div>a {
+        font-size: 11pt;
+    }
+
+    .container>.c5>.about {
+        padding-top: 10px;
+        z-index: 2;
+    }
+
+    .container>.c5>div.about>p {
+        font-size: 11pt;
+    }
+
+    .container>.c5>div.about>div>a {
+        font-size: 11pt;
+    }
+
+    .container>.c6>div.about {
+        bottom: 85px;
+    }
+    
+    .container>.c6>div.about>p {
+        font-size: 13pt;
+    }
+
+    .container>.card>div.about>div>a {
+        font-size: 12pt;
+    }
+
+    /* Footer */
+
+    footer>.container>.wrap-div>* {
+        font-size: 6pt;
+    }
+
+    footer>.container {
+        width: 92%;
+    }
+
+    footer>.container>.info>div>p {
+        font-size: 12px;
+    }
+
+    footer>.container>.info>div>ul>li>a {
+        font-size: 11px;
+    }
+
+    footer>.container>.info>div {
+        display: block;
+    }
+
+    footer>.container>.info>p {
+        font-size: 11px;
+    }
+
+    footer>.container>.info {
+        display: block;
+        justify-content: unset;
+    }
+
+    footer>.container>.info>div>ul {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px){
+    .wrapper{
+        width: 90%;
+    }
+
+    footer>.container>.info>div {
+        display: block;
+    }
+
+    footer>.container>.info {
+        display: block;
+        justify-content: unset;
+    }
+
+    footer>.container>.info>div>ul {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 2000px){
+    .wrapper{
+        width: 40%;
+    }
+
+    #header{
+        height: 700px;
+    }
+
+    #header>div.about {
+        padding-top: 65px;
+    }
+
+    #header>div.about>h1 {
+        font-size: 6em;
+    }
+
+    #header>div.about>p {
+        font-size: 27pt;
+    }
+
+    #header>div.about>a {
+        font-size: 24pt;
+    }
+
+
+    .ipad-pro{
+        height: 850px;
+    }
+
+    .ipad-pro>div.about {
+        padding-top: 65px;
+    }
+
+    .ipad-pro>div.about>h1 {
+        font-size: 6em;
+    }
+
+    .ipad-pro>div.about>p {
+        font-size: 27pt;
+    }
+
+    .ipad-pro>div.about>a {
+        font-size: 24pt;
+    }
+
+
+    .hero-imac {
+        height: 900px;
+    }
+
+    .hero-imac>div.about {
+        padding-top: 65px;
+    }
+
+    .hero-imac>div.about>h1 {
+        font-size: 6em;
+    }
+
+    .hero-imac>div.about>p {
+        font-size: 27pt;
+    }
+
+    .hero-imac>div.about>a {
+        font-size: 24pt;
+    }
+
+
+
+    .container>.card {
+        height: 800px;
+    }
+
+    .container>.card>.about {
+        padding-top: 60px;
+    }
+
+    .container>.card>div.about>h1 {
+        font-size: 3.5em;
+    }
+
+    .container>.card>div.about>p {
+        font-size: 21pt;
+    }
+
+    .container>.card>div.about>a {
+        font-size: 18pt;
+    }
+
+    .container>.c5>.back-img {
+        height: 58%;
+    }
+
+    .container>.c5>div.about>p {
+        width: 415px;
+    }
+
+    .container>.c6>div.about {
+        width: 510px;
+        margin-left: -255px;
+    }
+
+
+
+    footer>.container>.wrap-div>* {
+        font-size: 16pt;
+    }
+
+    footer>.container>.info>div>p {
+        font-size: 23px;
+    }
+
+    footer>.container>.info>div>ul {
+        margin-left: 80px;
+        width: 400px;
+    }
+
+    footer>.container>.info>div>ul>li>a {
+        font-size: 25px;
+    }
+
+    footer>.container>.info>p {
+        font-size: 26px;
+    }
+}
