@@ -101,7 +101,7 @@ const clearLocalStorage = () => {
 
 // TODO LIST
 const appendTodoList = (todoString, now) => {
-  todosList.push({ todoString, now });
+  todosList.push({ todoString, now, isDone: false });
   updateLocalStorage();
 };
 
@@ -178,8 +178,13 @@ const clearEverythingModal = () => {
   openModal();
 };
 
-const makeDoneTodo = (list) => {
-  list.classList.toggle("done");
+const makeDoneTodo = (todo) => {
+  todo.classList.toggle("done");
+  const index = binarySearch(todo.getAttribute("id"));
+  if (index !== -1) {
+    todosList[index].isDone = todo.classList.contains("done");
+    updateLocalStorage();
+  }
 };
 
 const zoomTodoFn = (e) => {
@@ -262,18 +267,22 @@ const deleteTodoModal = (e) => {
   modalButtons.appendChild(yesBtn);
   openModal();
 };
+
 const addTodoFn = (isFromInput = true, index = -1) => {
-  let now, todoString;
+  let now, todoString, isDone;
   if (isFromInput) {
     now = getCurrentDate();
     todoString = addTodo.value;
+    isDone = false;
   } else {
     now = todosList[index].now;
     todoString = todosList[index].todoString;
+    isDone = todosList[index].isDone;
   }
   if (!isFromInput || checkInputValidity()) {
     const list = document.createElement("li");
     list.setAttribute("class", "list");
+    if (isDone) list.classList.add("done");
     list.setAttribute("id", now.id);
     list.addEventListener("click", () => makeDoneTodo(list));
     // TITLE
@@ -286,15 +295,15 @@ const addTodoFn = (isFromInput = true, index = -1) => {
     postedTime.textContent = `${now.hours}:${now.minutes} ${now.day}.${now.month}.${now.year}`;
     // ZOOM
     const zoomTodo = document.createElement("span");
-    zoomTodo.setAttribute("class", "zoom icon fa-solid fa-eye");
+    zoomTodo.setAttribute("class", "zoom icon bi bi-eye-fill");
     zoomTodo.addEventListener("click", zoomTodoFn);
     // EDIT
     const editTodo = document.createElement("span");
-    editTodo.setAttribute("class", "edit icon fa-sharp fa-solid fa-pen");
+    editTodo.setAttribute("class", "edit icon bi bi-pencil-fill");
     editTodo.addEventListener("click", editTodoModal);
     // DELETE
     const deleteTodo = document.createElement("span");
-    deleteTodo.setAttribute("class", "delete icon fa-solid fa-trash-can");
+    deleteTodo.setAttribute("class", "delete icon bi bi-trash-fill");
     deleteTodo.addEventListener("click", deleteTodoModal);
 
     // POSTING TODO

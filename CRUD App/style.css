@@ -19,6 +19,7 @@ body {
     align-items: center;
     width: 100%;
     position: relative;
+    background-color: aliceblue;
 }
 #container {
     max-width: 500px;
@@ -123,6 +124,7 @@ small>a {
     border-radius: 5px;
     gap: 8px;
     cursor: pointer;
+    background-color: var(--secondary-color);
 }
 #todos>li>.title {
     flex: 1;
@@ -183,7 +185,7 @@ small>a {
     user-select: none;
 }
 .overlay>#modal>.modal-head>.close-modal {
-    font-size: 18px;
+    font-size: 25px;
     cursor: pointer;
 }
 .overlay>#modal>.modal-body {
