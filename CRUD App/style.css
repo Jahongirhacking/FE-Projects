@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+:root {
+    --main-color: rgb(0, 89, 255);
+    --secondary-color: white;
+    --edit-color: rgb(211, 180, 0);
+    --delete-color: rgb(184, 0, 0);
+    --danger: rgb(200, 0, 0);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+#container {
+    max-width: 500px;
+    width: 95%;
+    height: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+#container>.date {
+    display: grid;
+    gap: 5px;
+    user-select: none;
+}
+#full-day {
+    font-weight: 500;
+}
+#container>h1 {
+    color: var(--main-color);
+    font-size: 28pt;
+    font-weight: 500;
+    user-select: none;
+}
+small {
+    user-select: none;
+}
+small>a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+.input-container {
+    width: 100%;
+    position: relative;
+}
+.input-container>small {
+    position: absolute;
+    bottom: -22px;
+    color: var(--danger);
+    left: 4px;
+    font-size: 11pt;
+}
+.input-txt {
+    font-size: 14pt;
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.input-txt:focus {
+    outline: none;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+.btn {
+    border: none;
+    font-size: 13pt;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+    cursor: pointer;
+}
+.clear-btn {
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    background-color: var(--secondary-color);
+}
+.clear-btn:hover {
+    background-color: var(--danger);
+    color: var(--secondary-color);
+}
+.add-btn {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    background-color: var(--secondary-color);
+}
+.add-btn:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+#todos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    overflow-y: auto;
+}
+#todos>li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 14pt;
+    padding: 5px 8px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    gap: 8px;
+    cursor: pointer;
+}
+#todos>li>.title {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+#todos>li>.time {
+    margin-top: 1px;
+    font-size: 8pt;
+}
+#todos>li>.icon {
+    font-size: 15px;
+    cursor: pointer;
+}
+#todos>li>.zoom {
+    color: var(--main-color);
+}
+#todos>li>.edit {
+    color: var(--edit-color);
+}
+#todos>li>.delete {
+    color: var(--delete-color);
+}
+
+/* MODAL */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    background: linear-gradient(45deg, #0000006a, #0000008b);
+}
+.overlay>#modal {
+    position: fixed;
+    width: 95%;
+    max-width: 400px;
+    padding: 15px 20px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    display: grid;
+    gap: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.overlay>#modal>.modal-head {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.overlay>#modal>.modal-head>h2 {
+    font-weight: 500;
+    font-size: 18pt;
+    user-select: none;
+}
+.overlay>#modal>.modal-head>.close-modal {
+    font-size: 18px;
+    cursor: pointer;
+}
+.overlay>#modal>.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px
+}
+#modal-info>ul {
+    list-style: inside;
+    margin-top: 10px;
+}
+.overlay>#modal>.modal-body>.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.overlay>#modal>.modal-body>.buttons>.primary-btn, 
+.overlay>#modal>.modal-body>.buttons>.btn {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    background-color: var(--secondary-color);
+}
+.overlay>#modal>.modal-body>.buttons>.primary-btn:hover,
+.overlay>#modal>.modal-body>.buttons>.btn:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+.overlay>#modal>.modal-body>.buttons>.danger-btn {
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    background-color: var(--secondary-color);
+}
+.overlay>#modal>.modal-body>.buttons>.danger-btn:hover {
+    background-color: var(--danger);
+    color: var(--secondary-color);
+}
+
+.hidden {
+    display: none;
+}
+.done {
+    opacity: 0.5;
+}
+
+@media (max-width: 350px) {
+    .overlay>#modal>.modal-head>h2 {
+        font-size: 15pt;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- STYLE -->
+    <link
+      rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="date">
+        <div id="full-day">day month, year</div>
+        <div id="time">HH : MM : SS</div>
+      </div>
+      <h1>Todo List</h1>
+      <small>
+        by
+        <a href="https://leetcode.com/Jahongirhacking/" target="_blank"
+          >Jahongir Hayitov</a
+        >
+      </small>
+      <div class="input-container">
+        <input
+          placeholder="type todo..."
+          id="add-todo"
+          class="input-txt"
+          type="text"
+        />
+        <small id="invalid-input" class="hidden">Invalid Input</small>
+      </div>
+      <div class="buttons">
+        <button class="btn clear-btn" id="clear-btn">Clear All</button>
+        <button class="btn add-btn" id="add-btn">Add</button>
+      </div>
+      <ul id="todos"></ul>
+    </div>
+    <!-- MODAL SECTION -->
+    <div class="overlay hidden" id="modal-container">
+      <div class="modal" id="modal">
+        <div class="modal-head">
+          <h2 id="modal-title"></h2>
+          <span class="close-modal fa-solid fa-xmark" id="close-modal"></span>
+        </div>
+        <div class="modal-body">
+          <div class="info" id="modal-info">
+            <input
+              placeholder="write new todo..."
+              class="input-txt"
+              type="text"
+            />
+          </div>
+          <div class="buttons" id="modal-btns"></div>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPT -->
+    <script src="./app.js"></script>
+  </body>
+</html>
