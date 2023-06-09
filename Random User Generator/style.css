@@ -1,0 +1,235 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+
+:root {
+    --dark-theme: rgb(26, 26, 26);
+    --light-theme: aliceblue;
+    --dark-yellow: rgb(189, 140, 17);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+nav {
+    width: 99%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 15px;
+}
+
+nav>.logo {
+    width: 50px;
+}
+
+nav > i {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: var(--dark-theme);
+    padding-top: 10px;
+    cursor: pointer;
+}
+i.fa-moon {
+    color: white;
+}
+
+i.fa-sun {
+    color: gold;
+}
+
+header {
+    background: url("./src/planet-earth-night-view-illuminated-orbit-dark-background-5k-3440x1440-8934.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 28pt;
+    font-weight: 700;
+    padding: 30px 0;
+    color: white;
+    transition: background-size, 0.4s ease;
+}
+
+header:hover {
+    background-size: 105%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+    max-width: 800px;
+    align-items: center;
+    padding: 30px 0;
+    gap: 40px;
+}
+
+main > form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 99%;
+    gap: 15px;
+}
+
+.txt-input {
+    border: 1px solid grey;
+}
+
+main > form > .search-user {
+    max-width: 300px;
+    width: 80%;
+    font-size: 15pt;
+    padding: 5px 10px;
+    outline: none;
+    color: var(--dark-yellow);
+}
+
+.btn {
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+main > form > .btn {
+    background-color: var(--dark-yellow);
+    color: white;
+    padding: 8px 12px;
+    font-size: 13pt;
+}
+
+main > .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+main > .card-container > .card {
+    width: 32%;
+    background-color: var(--light-theme);
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 0 3px rgba(27, 27, 27, 0.297);
+    padding: 15px 5px;
+    position: relative;
+    transition: transform, 0.3s ease;
+}
+
+main > .card-container > .card:hover {
+    transform: scale(1.03);
+}
+
+.card > img {
+    border-radius: 50%;
+}
+
+.card > p {
+    margin-top: 7px;
+}
+
+.card > .delete-user {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.delete-user:hover {
+    transform: rotate(20deg);
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.801);
+    backdrop-filter: blur(3px);
+    position: fixed;
+}
+
+.overlay > .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    font-size: 50px;
+    color: var(--dark-yellow);
+}
+
+/* DARK MODE */
+
+.dark  {
+    background-color: var(--dark-theme);
+}
+
+.dark>main>.card-container {
+    color: white;
+    background-color: var(--dark-theme);
+} 
+
+.dark>main>.card-container>.card {
+    background-color: var(--dark-theme);
+    box-shadow: 0 0 3px black;
+}
+
+.dark > main > form > .search-user {
+    background-color: var(--dark-theme);
+}
+
+.dark > main > form > .btn {
+    color: var(--dark-theme);
+}
+
+
+/* LIGHT MODE */
+
+.light {
+    background-color: var(--light-theme);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    main > .card-container > .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 520px) {
+    header {
+        font-size: 20pt;
+    }
+    main > form > .search-user {
+        width: 80%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 450px) {
+    main > .card-container > .card {
+        width: 75%;
+    }
+}
