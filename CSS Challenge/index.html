@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Challenge</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <!-- HEADER -->
+      <header id="header" class="header">
+        <div class="header__info">
+          <h1 class="header__title">
+            <img src="./assets/logo_collapsed.jpg" alt="logo collapsed" />
+            Dashboard
+          </h1>
+          <p class="header__paragraph">Projects: 42 | Customers: 10</p>
+        </div>
+        <img
+          src="./assets/icons/profile.png"
+          alt="profile image"
+          class="header__profile-img"
+        />
+      </header>
+      <aside id="aside" class="aside">
+        <!-- Alternative Images -->
+        <img
+          src="./assets/logo.jpg"
+          alt="aside logo"
+          class="aside__logo logo"
+        />
+        <img
+          src="./assets/logo_collapsed.jpg"
+          alt="aside logo collapsed"
+          class="aside__logo_collapsed logo"
+        />
+        <div class="aside__container">
+          <nav class="aside__navigation">
+            <!-- Dashboard Link -->
+            <a href="#" class="active">
+              <img src="./assets/icons/dashboard.png" alt="Dashboard icon" />
+              <span>Dashboard</span>
+            </a>
+            <!-- Customers Link -->
+            <a href="#">
+              <img src="./assets/icons/customers.png" alt="Customers icon" />
+              <span>Customers</span>
+            </a>
+            <!-- Settings Link -->
+            <a href="#">
+              <img src="./assets/icons/settings.png" alt="Settings icon" />
+              <span>Settings</span>
+            </a>
+          </nav>
+          <!-- Collapse Button -->
+          <button class="aside__collapse-btn">
+            <!-- Alternative Images -->
+            <img
+              src="./assets/icons/anti-collapse.png"
+              class="aside__anti-collapse-icon"
+              alt="Anti Collapse icon"
+            />
+            <img
+              src="./assets/icons/collapse.png"
+              class="aside__collapse-icon"
+              alt="Collapse icon"
+            />
+            <span>Collapse</span>
+          </button>
+        </div>
+      </aside>
+      <!-- MAIN -->
+      <main id="main" class="main">
+        <div class="card-container">
+          <div class="card">
+            <h3 class="card__title">Yakidoo</h3>
+            <div class="card__body">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </div>
+            <div class="card__info">
+              <p class="card__amount">
+                <img src="./assets/icons/money.png" alt="amount" />
+                <span>1.2345,67 €</span>
+              </p>
+              <p class="card__user">
+                <img src="./assets/icons/user.png" alt="user full name" />
+                <span>Customer A</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Lexoo</h3>
+            <div class="card__body">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </div>
+            <div class="card__info">
+              <p class="card__amount">
+                <img src="./assets/icons/money.png" alt="amount" />
+                <span>1.2345,67 €</span>
+              </p>
+              <p class="card__user">
+                <img src="./assets/icons/user.png" alt="user full name" />
+                <span>Customer B</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Bluejam</h3>
+            <div class="card__body">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </div>
+            <div class="card__info">
+              <p class="card__amount">
+                <img src="./assets/icons/money.png" alt="amount" />
+                <span>1.2345,67 €</span>
+              </p>
+              <p class="card__user">
+                <img src="./assets/icons/user.png" alt="user full name" />
+                <span>Customer C</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Devshare</h3>
+            <div class="card__body">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </div>
+            <div class="card__info">
+              <p class="card__amount">
+                <img src="./assets/icons/money.png" alt="amount" />
+                <span>1.2345,67 €</span>
+              </p>
+              <p class="card__user">
+                <img src="./assets/icons/user.png" alt="user full name" />
+                <span>Customer A</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Edgeware</h3>
+            <div class="card__body">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </div>
+            <div class="card__info">
+              <p class="card__amount">
+                <img src="./assets/icons/money.png" alt="amount" />
+                <span>1.2345,67 €</span>
+              </p>
+              <p class="card__user">
+                <img src="./assets/icons/user.png" alt="user full name" />
+                <span>Customer D</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Wikizz</h3>
+            <div class="card__body">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </div>
+            <div class="card__info">
+              <p class="card__amount">
+                <img src="./assets/icons/money.png" alt="amount" />
+                <span>1.2345,67 €</span>
+              </p>
+              <p class="card__user">
+                <img src="./assets/icons/user.png" alt="user full name" />
+                <span>Customer A</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Roombo</h3>
+            <div class="card__body">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </div>
+            <div class="card__info">
+              <p class="card__amount">
+                <img src="./assets/icons/money.png" alt="amount" />
+                <span>1.2345,67 €</span>
+              </p>
+              <p class="card__user">
+                <img src="./assets/icons/user.png" alt="user full name" />
+                <span>Customer A</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Dabjam</h3>
+            <div class="card__body">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </div>
+            <div class="card__info">
+              <p class="card__amount">
+                <img src="./assets/icons/money.png" alt="amount" />
+                <span>1.2345,67 €</span>
+              </p>
+              <p class="card__user">
+                <img src="./assets/icons/user.png" alt="user full name" />
+                <span>Customer A</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Photobug</h3>
+            <div class="card__body">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </div>
+            <div class="card__info">
+              <p class="card__amount">
+                <img src="./assets/icons/money.png" alt="amount" />
+                <span>1.2345,67 €</span>
+              </p>
+              <p class="card__user">
+                <img src="./assets/icons/user.png" alt="user full name" />
+                <span>Customer A</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
