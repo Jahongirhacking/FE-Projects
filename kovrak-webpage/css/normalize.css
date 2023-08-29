@@ -1,0 +1,169 @@
+/* Here should be normalize codes or globals */
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+
+:root {
+  --primary-color: #0e3842;
+  --primary-shadow-color: #0e3842be;
+  --primary-blur-bgcolor: #0e3842d1;
+  --secondary-color: aliceblue;
+  --primary-text: #0e3842;
+  --secondary-text: black;
+  --text-color: white;
+  --default-padding: 10%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: var(--primary-shadow-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100vw;
+  /* padding-top: 70px; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background-color: var(--secondary-color);
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.fa_icon {
+  font-size: 20pt;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+}
+
+.hidden {
+  opacity: 0 !important;
+}
+
+.destroyed {
+  display: none !important;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 3px;
+  font-size: 12pt;
+  cursor: pointer !important;
+}
+
+.has-transition {
+  transition: 0.4s ease !important;
+}
+
+.small {
+  font-size: 10pt;
+  position: absolute;
+  bottom: -25px;
+  right: 5px;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+section,
+main,
+footer {
+  padding: 100px var(--default-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  text-align: center;
+}
+
+.img-wrapper {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.title-field {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.title {
+  font-size: 28pt;
+  width: fit-content;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--primary-text);
+}
+
+.title-line {
+  border: 4px solid var(--primary-text);
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay > .modal {
+  padding: 5px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: white;
+  width: fit-content;
+  width: 80%;
+  max-width: 300px;
+}
+
+.overlay > .modal > * {
+  width: 100%;
+}

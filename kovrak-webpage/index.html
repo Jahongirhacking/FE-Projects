@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kovrak O'simligi</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="./assets/icon.jpg" type="image/jpg" />
+  </head>
+  <body>
+    <div id="root">
+      <!-- NAVBAR SECTION -->
+      <nav class="navbar invisible has-transition">
+        <img
+          src="./assets/logo.png"
+          alt="Korxona Logosi"
+          class="navbar__logo"
+        />
+        <div class="navbar__menu">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a href="#main">Asosiy</a></li>
+            <li class="navbar__item"><a href="#blog">Blog</a></li>
+            <li class="navbar__item"><a href="#documents">Hujjatlar</a></li>
+            <li class="navbar__item"><a href="#contact">Bog'lanish</a></li>
+          </ul>
+          <!-- Dark and Light Mode -->
+          <button class="toggle-mode-btn">
+            <i class="fa-solid fa-sun fa_icon destroyed"></i>
+            <i class="fa-solid fa-moon fa_icon"></i>
+          </button>
+        </div>
+      </nav>
+      <!-- BANNER -->
+      <!-- Warning: I am using AOS here -->
+      <div class="banner">
+        <h1 class="banner__title" data-aos="fade-up" data-aos-duration="1500">
+          Kovrak O'simligi
+        </h1>
+        <p data-aos="fade-up" data-aos-duration="1500">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste dolores
+          id quaerat expedita numquam dolorum molestias voluptas iure nisi
+          recusandae fugit ad cupiditate, optio eius cum ab error a deserunt!
+        </p>
+        <a
+          class="banner__btn btn has-transition"
+          href="#"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          >Batafsil</a
+        >
+      </div>
+      <!-- MAIN SECTION -->
+      <main id="main" class="main">
+        <!-- TITLE -->
+        <div class="main__title-field title-field">
+          <span class="main__title-line title-line"></span>
+          <h1 class="main__title title">Asosiy</h1>
+          <span class="main__title-line title-line"></span>
+        </div>
+        <!-- INFO -->
+        <p
+          class="main__about-1"
+          style="text-align: left; color: var(--secondary-text)"
+          data-aos="fade-up-right"
+        >
+          <b style="color: var(--primary-color)">Kovrak</b> - (Ferula) turkumi
+          selderdoshlar (soyabonguldoshlar)- Apiaceae (Umbelliferae) oilasiga
+          mansub bo'lib, ko'p yillik o't o'simligi. Kovrakning yer yuzida 160
+          dan ziyod turlari, O'rta Osiyo respublikalarida 104, mamlakatimizda
+          esa 50 turi uchraydi. Smola - yelim olishda sassiq kovrak, Kuhiston
+          kovragi kabi turilari ishlatiladi.
+        </p>
+        <!-- CARDS -->
+        <div class="main__card-container">
+          <div class="main__card has-transition" data-aos="zoom-in-right">
+            <i class="fa-solid fa-heart fa_icon" style="color: red"></i>
+            <p>Sog'lig'ingiz Uchun Foydali</p>
+          </div>
+          <div class="main__card has-transition" data-aos="zoom-in-up">
+            <i
+              class="fa-solid fa-bolt-lightning fa_icon"
+              style="color: gold"
+            ></i>
+            <p>Quvvat Bag'ishlovchi</p>
+          </div>
+          <div class="main__card has-transition" data-aos="zoom-in-left">
+            <i
+              class="fa-brands fa-pagelines fa_icon"
+              style="color: rgb(0, 128, 43)"
+            ></i>
+            <p>Tabiiy Mahsulot</p>
+          </div>
+        </div>
+        <p
+          class="main__about-2"
+          style="
+            text-align: right;
+            position: relative;
+            color: var(--secondary-text);
+          "
+          data-aos="fade-up-left"
+        >
+          Kovrakning yelim-smolasi xalq tabobatida o'pka sili, o'lat, zaxm,
+          ko'k-yo'tal, tish og'rig'i, asab va boshqa kasalliklarni davolash
+          uchun, hamda quvvat beruvchi, balg'am ko'chiruvchi va gijja haydovchi
+          dori sifatida qo'llaniladi. Ilmiy meditsinada kovrak yelim-smolasi -
+          “assafetida” nomi bilan kukun, emulsiya va tindirma (nastoyka) holida
+          og'riq qoldiruvchi, balg'am ko'chiruvchi, quvvat beruvchi va
+          tinchlantiruvchi vosita sifatida ishlatiladi va ko'pgina davlatlar
+          farmokopeyasiga kiritilgan.
+          <small class="small">UzPharmaAgency 2023</small>
+        </p>
+      </main>
+
+      <section id="blog" class="blog">
+        <!-- TITLE -->
+        <div class="blog__title-field title-field">
+          <span class="blog__title-line title-line"></span>
+          <h1 class="blog__title title">Blog</h1>
+          <span class="blog__title-line title-line"></span>
+        </div>
+        <!-- CARDS -->
+        <div class="blog__card-container">
+          <!-- Card 1 -->
+          <div class="blog__card has-transition" data-aos="fade-up-right">
+            <div
+              class="blog__img-wrapper img-wrapper has-transition"
+              style="background-image: url('./assets/ibn-sino.jpeg')"
+            ></div>
+            <div class="blog__body">
+              <p class="blog__description">
+                Ibn Sino: Kovrak urug‘ining qaynatmasi (urug‘i xuddi
+                supurginikiga o‘xshash malla rang, shakli ham shunga o‘xshab
+                ketadi) 3 mahal 50 grammdan ichilsa...
+              </p>
+              <button class="blog__btn btn has-transition">Batafsil</button>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="blog__card has-transition" data-aos="fade-up">
+            <div
+              class="blog__img-wrapper img-wrapper has-transition"
+              style="background-image: url('./assets/blog-example.jpg')"
+            ></div>
+            <div class="blog__body">
+              <p class="blog__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                reiciendis culpa necessitatibus voluptatibus, est inventore...
+              </p>
+              <button class="blog__btn btn has-transition">Batafsil</button>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="blog__card has-transition" data-aos="fade-up-left">
+            <div
+              class="blog__img-wrapper img-wrapper has-transition"
+              style="background-image: url('./assets/blog-example-2.jpeg')"
+            ></div>
+            <div class="blog__body">
+              <p class="blog__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                reiciendis culpa necessitatibus voluptatibus, est inventore...
+              </p>
+              <button class="blog__btn btn has-transition">Batafsil</button>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="blog__card has-transition" data-aos="fade-up-right">
+            <div
+              class="blog__img-wrapper img-wrapper has-transition"
+              style="background-image: url('./assets/blog-example-1.jpg')"
+            ></div>
+            <div class="blog__body">
+              <p class="blog__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                reiciendis culpa necessitatibus voluptatibus, est inventore...
+              </p>
+              <button class="blog__btn btn has-transition">Batafsil</button>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="blog__card has-transition" data-aos="fade-up">
+            <div
+              class="blog__img-wrapper img-wrapper has-transition"
+              style="background-image: url('./assets/blog-example-3.jpg')"
+            ></div>
+            <div class="blog__body">
+              <p class="blog__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                reiciendis culpa necessitatibus voluptatibus, est inventore...
+              </p>
+              <button class="blog__btn btn has-transition">Batafsil</button>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="blog__card has-transition" data-aos="fade-up-left">
+            <div
+              class="blog__img-wrapper img-wrapper has-transition"
+              style="background-image: url('./assets/blog-example-4.jpg')"
+            ></div>
+            <div class="blog__body">
+              <p class="blog__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                reiciendis culpa necessitatibus voluptatibus, est inventore...
+              </p>
+              <button class="blog__btn btn has-transition">Batafsil</button>
+            </div>
+          </div>
+          <!-- Link to full article -->
+          <a href="#" class="small">Ko'proq O'qish</a>
+        </div>
+      </section>
+
+      <div class="overlay destroyed">
+        <div class="modal">
+          <img id="qr-code" src="#" alt="QR kod jarayonda!" />
+        </div>
+      </div>
+
+      <!-- DOCUMENTS -->
+      <section id="documents" class="documents">
+        <!-- TITLE -->
+        <div class="documents__title-field title-field">
+          <span class="main__title-line title-line"></span>
+          <h1 class="main__title title">Hujjatlar</h1>
+          <span class="main__title-line title-line"></span>
+        </div>
+        <!-- docs -->
+        <ul class="documents__list">
+          <li
+            class="documents__item documents__btn btn has-transition"
+            data-aos="fade-up-right"
+          >
+            <p class="documents__caption">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+              asperiores morales...
+            </p>
+            <i class="fa-solid fa-right-long"></i>
+          </li>
+          <li
+            class="documents__item documents__btn btn has-transition"
+            data-aos="fade-up-left"
+          >
+            <p class="documents__caption">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+              asperiores morales...
+            </p>
+            <i class="fa-solid fa-right-long"></i>
+          </li>
+          <li
+            class="documents__item documents__btn btn has-transition"
+            data-aos="fade-up-right"
+          >
+            <p class="documents__caption">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+              asperiores morales...
+            </p>
+            <i class="fa-solid fa-right-long"></i>
+          </li>
+          <li
+            class="documents__item documents__btn btn has-transition"
+            data-aos="fade-up-left"
+          >
+            <p class="documents__caption">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+              asperiores morales...
+            </p>
+            <i class="fa-solid fa-right-long"></i>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ARROW UP -->
+      <button class="arrow-up-btn">
+        <i class="fa-solid fa-arrow-up fa_icon"></i>
+      </button>
+
+      <!-- CONTACT -->
+      <footer id="contact" class="contact">
+        <!-- TITLE -->
+        <div class="contact__title-field title-field">
+          <span class="contact__title-line title-line"></span>
+          <h1 class="contact__title title">Bog'lanish</h1>
+          <span class="contact__title-line title-line"></span>
+        </div>
+        <ul class="contact__address-list">
+          <li>
+            <ul class="contact__address-item">
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                voluptate, saepe sed quidem maiores ratione hic consectetur quod
+                atque commodi.
+              </li>
+              <li>
+                &copy; Copyright Jahongir Hayitov
+                <span id="current-year"></span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="contact__address-item">
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-location-dot"></i> Qashqadaryo
+                  viloyati, G'uzor tumani...</a
+                >
+              </li>
+              <li>
+                <a href="tel:+998(XX)-XXX-XX-XX"
+                  ><i class="fa-solid fa-phone"></i> +998(XX)-XXX-XX-XX</a
+                >
+              </li>
+              <li>
+                <a href="mailto:J*******@gmail.com"
+                  ><i class="fa-solid fa-envelope"></i> J*******@gmail.com</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="contact__address-item">
+              <form class="contact__form">
+                <input type="text" placeholder="Izoh qoldiring" />
+                <input type="email" placeholder="email" />
+                <button class="form__btn btn has-transition">Yuborish</button>
+              </form>
+              <ul class="contact__social-links">
+                <li>
+                  <a href="#"><i class="fa-brands fa-telegram fa_icon"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-instagram fa_icon"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-facebook fa_icon"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-youtube fa_icon"></i></a>
+                </li>
+              </ul>
+            </ul>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./script/app.js"></script>
+  </body>
+</html>
