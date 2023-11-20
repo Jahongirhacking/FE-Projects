@@ -125,9 +125,16 @@ const showInvalidInput = () => {
 };
 
 const checkInputValidity = () => {
-  let todoString = addTodo.value;
-  todoString = todoString.trim();
-  if (todoString.length === 0 || todoString === " ") {
+  const restrictedWords = ["fuck", "pussy", "penis", "nigga", "ass"];
+  let todoString = addTodo.value.trim();
+  let isRestricted = false;
+  for (const word of restrictedWords) {
+    if (todoString.includes(word)) {
+      isRestricted = true;
+      break;
+    }
+  }
+  if (todoString.length === 0 || todoString === " " || isRestricted) {
     showInvalidInput();
     return false;
   }
