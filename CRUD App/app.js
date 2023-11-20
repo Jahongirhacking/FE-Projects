@@ -129,7 +129,7 @@ const checkInputValidity = () => {
   let todoString = addTodo.value.trim();
   let isRestricted = false;
   for (const word of restrictedWords) {
-    if (todoString.includes(word)) {
+    if (todoString.toLowerCase().includes(word)) {
       isRestricted = true;
       break;
     }
