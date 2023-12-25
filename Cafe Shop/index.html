@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="./style.css" >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+    <link rel="shortcut icon" href="./assets/x-logo.png" type="image/x-icon" >
+  </head>
+  <body>
+    <div id="root">
+      <nav class="nav">
+        <div class="nav__logo">
+          <img src="./assets/logo.png" alt="logo image" >
+        </div>
+        <div class="nav__panel">
+          <ul class="nav__links">
+            <li><a href="#favorite-coffee">Favorite coffee</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#app">Mobile app</a></li>
+            <li><a href="#contact">Contact us</a></li>
+          </ul>
+          <div class="nav__menu">
+            <a href="./menu"
+              >Menu <i class="fa fa-coffee" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+        <i class="fa-solid fa-bars hidden"></i>
+      </nav>
+
+      <header class="hero">
+        <article class="hero__content">
+          <h2 class="hero__title enjoy">
+            <span class="premium-style">Enjoy</span> premium coffee at our
+            charming cafe
+          </h2>
+          <p class="hero__info">
+            With its inviting atmosphere and delicious coffee options, the
+            Coffee House Resource is a popular destination for coffee lovers and
+            those seeking a warm and inviting space to enjoy their favorite
+            beverage.
+          </p>
+          <a href="./menu" class="hero__link-btn"
+            ><span>Menu</span> <i class="fa fa-coffee" aria-hidden="true"></i
+          ></a>
+        </article>
+      </header>
+
+      <section id="favorite-coffee" class="favorite-coffee">
+        <h1 class="favorite__title">
+          Choose your <span class="premium-style">favorite</span> coffee
+        </h1>
+        <div class="favorite__slider-container">
+          <div id="slider" class="favorite__slider">
+            <!-- Slide Item -->
+            <article id="slide-1" class="slide">
+              <div class="image-container">
+                <img src="./assets/coffee-slider-1.png" alt="coffee image" >
+              </div>
+              <div class="favorite__content">
+                <h2 class="favorite__name">S’mores Frappuccino</h2>
+                <p class="favorite__info">
+                  This new drink takes an espresso and mixes it with brown sugar
+                  and cinnamon before being topped with oat milk.
+                </p>
+                <b class="favorite__price">$5.50</b>
+              </div>
+            </article>
+            <!-- Slide Item -->
+            <article id="slide-2" class="slide">
+              <div class="image-container">
+                <img src="./assets/coffee-slider-2.png" alt="coffee image" >
+              </div>
+              <div class="favorite__content">
+                <h2 class="favorite__name">Caramel Macchiato</h2>
+                <p class="favorite__info">
+                  Fragrant and unique classic espresso with rich caramel-peanut
+                  syrup, with the addition of delicate cream under whipped thick
+                  foam.
+                </p>
+                <b class="favorite__price">$5.00</b>
+              </div>
+            </article>
+            <!-- Slide Item -->
+            <article id="slide-3" class="slide">
+              <div class="image-container">
+                <img src="./assets/coffee-slider-3.png" alt="coffee image" >
+              </div>
+              <div class="favorite__content">
+                <h2 class="favorite__name">Ice coffee</h2>
+                <p class="favorite__info">
+                  A popular summer drink that tones and invigorates. Prepared
+                  from coffee, milk and ice.
+                </p>
+                <b class="favorite__price">$4.50</b>
+              </div>
+            </article>
+            <!-- Slide Item -->
+          </div>
+          <div class="favorite__nav">
+            <a class="slide__portal active"></a>
+            <a class="slide__portal"></a>
+            <a class="slide__portal"></a>
+            <!-- left - right buttons -->
+            <a class="slide__btn left disabled" id="leftBtn"
+              ><i class="fa fa-arrow-left" aria-hidden="true"></i
+            ></a>
+            <a class="slide__btn right" id="rightBtn"
+              ><i class="fa fa-arrow-right" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <h2 class="about__title">
+          Resource is
+          <span class="premium-style">the perfect and cozy place</span> where
+          you can enjoy a variety of hot beverages, relax, catch up with
+          friends, or get some work done.
+        </h2>
+
+        <div class="about__image-container">
+          <div class="grid-container grid-1">
+            <div class="image-box">
+              <img src="./assets/about-1.png" alt="about image" >
+            </div>
+            <div class="image-box extra-img">
+              <img src="./assets/about-2.png" alt="about image" >
+            </div>
+          </div>
+          <div class="grid-container grid-2">
+            <div class="image-box extra-img">
+              <img src="./assets/about-3.png" alt="about image" >
+            </div>
+            <div class="image-box">
+              <img src="./assets/about-4.png" alt="about image" >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="app" class="app">
+        <div class="image-box">
+          <img src="./assets/mobile-screens.png" alt="mobile image" >
+        </div>
+        <div class="app__content">
+          <h2 class="app__title">
+            <span class="premium-style">Download</span> our apps to start
+            ordering
+          </h2>
+          <p class="app__info">
+            Download the Resource app today and experience the comfort of
+            ordering your favorite coffee from wherever you are
+          </p>
+          <div class="app__links">
+            <a href="#">
+              <i class="fa-brands fa-apple"></i>
+              <div class="link-content">
+                <p>Available on the</p>
+                <h3>App Store</h3>
+              </div>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-google-play"></i>
+              <div class="link-content">
+                <p>Available on the</p>
+                <h3>Google Play</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" id="contact">
+        <div class="motto">
+          <h2>
+            Sip, Savor, Smile. <br >
+            <span class="premium-style">It’s coffee time!</span>
+          </h2>
+          <nav class="social-network__links">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <section class="contact-us">
+          <h2>Contact us</h2>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-location-dot"></i> 8558 Green Rd., LA</li>
+            <li><i class="fa-solid fa-phone"></i> +1 (603) 555-0123</li>
+            <li>
+              <i class="fa-regular fa-clock"></i> Mon-Sat: 9:00 AM – 23:00 PM
+            </li>
+            <li>&copy; Jahongir Hayitov 2023</li>
+          </ul>
+        </section>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

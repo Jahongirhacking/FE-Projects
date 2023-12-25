@@ -1,0 +1,113 @@
+.footer {
+  background-color: var(--primary-color);
+  border-radius: 40px;
+  color: var(--label-color);
+  margin-top: 45px;
+  padding: 90px;
+  display: flex;
+  align-items: center;
+  gap: 120px;
+
+  @media screen and (max-width: 925px) {
+    gap: 80px;
+  }
+
+  @media screen and (max-width: 810px) {
+    gap: 40px;
+  }
+
+  @media screen and (max-width: 770px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 505px) {
+    padding: 40px 10px;
+  }
+
+  .motto {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h1 {
+      color: var(--label-color);
+      font-size: 40pt;
+      font-weight: 600;
+
+      @media screen and (max-width: 1100px) {
+        font-size: 25pt;
+      }
+
+      @media screen and (max-width: 925px) {
+        font-size: 22pt;
+      }
+
+      @media screen and (max-width: 770px) {
+        font-size: 30pt;
+      }
+
+      @media screen and (max-width: 400px) {
+        font-size: 25pt;
+      }
+    }
+    .social-network__links > ul {
+      display: flex;
+      gap: 10px;
+      @media screen and (max-width: 770px) {
+        justify-content: center;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid var(--label-color);
+        color: var(--label-color);
+        transition: background-color 0.6s ease, color 0.6s ease;
+
+        @media screen and (max-width: 925px) {
+          width: 40px;
+          height: 40px;
+        }
+
+        &:hover {
+          background-color: var(--label-color);
+          color: var(--primary-color);
+        }
+
+        i.fa-brands {
+          font-size: 28px;
+
+          @media screen and (max-width: 925px) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    h2 {
+      font-size: 16pt;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @media screen and (max-width: 925px) {
+        font-size: 11pt;
+      }
+    }
+  }
+}
