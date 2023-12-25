@@ -266,6 +266,7 @@ body #root {
 }
 
 .hero {
+  position: relative;
   background: url("./assets/hero.jpg"), black;
   background-position: center;
   background-repeat: no-repeat;
@@ -273,17 +274,29 @@ body #root {
   border-radius: 38px;
   color: var(--label-color);
   padding: 90px;
+  overflow: hidden;
 }
 @media screen and (max-width: 590px) {
   .hero {
     padding: 30px;
   }
 }
+.hero video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  object-fit: cover;
+}
 .hero .hero__content {
+  position: relative;
   max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 35px;
+  z-index: 1;
 }
 @media screen and (max-width: 590px) {
   .hero .hero__content {

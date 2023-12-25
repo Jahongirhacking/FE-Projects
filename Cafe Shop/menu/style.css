@@ -504,7 +504,7 @@ body #root {
   transition: transform 0.4s ease;
   transform: scale(1.2);
 }
-.main .products .product-card .card__image img:hover {
+.main .products .product-card:hover .card__image img {
   transform: scale(1.05);
 }
 .main .products .product-card .card__body {

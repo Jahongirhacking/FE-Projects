@@ -3,6 +3,7 @@
 @import "./styles/global.scss";
 
 .hero {
+  position: relative;
   background: url("./assets/hero.jpg"), black;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,16 +11,29 @@
   border-radius: 38px;
   color: var(--label-color);
   padding: 90px;
+  overflow: hidden;
 
   @media screen and (max-width: 590px) {
     padding: 30px;
   }
 
+  video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    object-fit: cover;
+  }
+
   .hero__content {
+    position: relative;
     max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 35px;
+    z-index: 1;
 
     @media screen and (max-width: 590px) {
       gap: 25px;
