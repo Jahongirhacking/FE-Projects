@@ -18,13 +18,14 @@
   }
 
   video {
-    position: absolute;
-    left: 0;
-    top: 0;
+    filter: brightness(0.5);
     height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
     width: 100%;
     z-index: 0;
-    object-fit: cover;
   }
 
   .hero__content {
@@ -69,13 +70,17 @@
     }
 
     .hero__link-btn {
+      align-items: center;
       background-color: var(--label-color);
       border-radius: 30px;
       color: var(--primary-color);
-      width: 180px;
-      text-align: center;
-      padding: 20px;
+      column-gap: 5px;
+      display: flex;
       font-weight: 600;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      width: 180px;
 
       @media screen and (max-width: 715px) {
         width: 120px;
@@ -88,19 +93,19 @@
         padding: 10px;
       }
 
-      i.fa {
+      .fa-coffee {
         opacity: 0;
         transform: translateX(-6px);
         transition: transform 0.5s, opacity 0.5s, display 0.5s;
+        width: 25px;
       }
 
       span {
-        display: inline-block;
         transform: translateX(11px);
         transition: transform 0.4s ease;
       }
 
-      &:hover > i.fa {
+      &:hover > .fa-coffee {
         opacity: 1;
         transform: translateX(0px);
       }
