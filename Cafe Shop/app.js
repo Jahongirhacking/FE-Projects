@@ -9,6 +9,7 @@ const slidePortals = document.querySelectorAll(
   ".favorite__nav > .slide__portal"
 );
 const navPanel = document.querySelector(".nav__panel");
+const menuIcon = document.querySelector(".nav > .fa-bars");
 
 const currentSlideChanged = (slideNumber) => {
   // Number of slides
@@ -46,17 +47,20 @@ const currentSlideChanged = (slideNumber) => {
 const handleResize = () => {
   if (window.innerWidth < 760) {
     document.querySelector(".nav__panel").classList.add("hidden");
-    document.querySelector(".nav > i.fa-bars").classList.remove("hidden");
+    menuIcon.classList.remove("hidden");
   } else {
     document.querySelector(".nav__panel").classList.remove("hidden");
-    document.querySelector(".nav > i.fa-bars").classList.add("hidden");
+    menuIcon.classList.add("hidden");
   }
 };
 
 const handleNavPanel = () => {
   navPanel.classList.toggle("active");
   navPanel.classList.toggle("hidden");
-  document.querySelector(".nav > i.fa-bars").classList.toggle("hidden");
+  menuIcon.classList.toggle("active");
+  menuIcon.classList.contains("active")
+    ? menuIcon.setAttribute("src", "./assets/icon-x.png")
+    : menuIcon.setAttribute("src", "./assets/icon-burger.png");
 };
 
 slidePortals.forEach((a, index) => {
@@ -79,9 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   handleResize();
 });
 
-document
-  .querySelector(".nav > i.fa-bars")
-  .addEventListener("click", handleNavPanel);
+menuIcon.addEventListener("click", handleNavPanel);
 
 navPanel.addEventListener("click", () => {
   if (navPanel.classList.contains("active")) {

@@ -11,6 +11,7 @@ const modalSizes = document.getElementById("modal__sizes");
 const modalAdditives = document.getElementById("modal__additives");
 const modalCost = document.getElementById("modal__cost");
 const navPanel = document.querySelector(".nav__panel");
+const menuIcon = document.querySelector(".nav > .fa-bars");
 
 const menu = {
   coffee: [
@@ -236,17 +237,20 @@ const displayProducts = (type, target = coffeeBtn) => {
 const handleResize = () => {
   if (window.innerWidth < 760) {
     document.querySelector(".nav__panel").classList.add("hidden");
-    document.querySelector(".nav > i.fa-bars").classList.remove("hidden");
+    menuIcon.classList.remove("hidden");
   } else {
     document.querySelector(".nav__panel").classList.remove("hidden");
-    document.querySelector(".nav > i.fa-bars").classList.add("hidden");
+    menuIcon.classList.add("hidden");
   }
 };
 
 const handleNavPanel = () => {
   navPanel.classList.toggle("active");
   navPanel.classList.toggle("hidden");
-  document.querySelector(".nav > i.fa-bars").classList.toggle("hidden");
+  menuIcon.classList.toggle("active");
+  menuIcon.classList.contains("active")
+    ? menuIcon.setAttribute("src", "../assets/icon-x.png")
+    : menuIcon.setAttribute("src", "../assets/icon-burger.png");
 };
 
 window.addEventListener("resize", handleResize);
@@ -280,9 +284,7 @@ modalOverlay
   .querySelector("#modal__close-btn")
   .addEventListener("click", closeModal);
 
-document
-  .querySelector(".nav > i.fa-bars")
-  .addEventListener("click", handleNavPanel);
+menuIcon.addEventListener("click", handleNavPanel);
 
 navPanel.addEventListener("click", () => {
   if (navPanel.classList.contains("active")) {
