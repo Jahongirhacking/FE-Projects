@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  padding: 25px 10px;
+}
+#root .game-container {
+  display: flex;
+  column-gap: 50px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 700px) {
+  #root .game-container {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+#root .game-container .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(84, 85, 172, 0.4196078431);
+  z-index: 1;
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#root .game-container .modal.failed {
+  background-color: rgba(205, 5, 5, 0.4196078431);
+}
+#root .game-container .modal.success {
+  background-color: rgba(11, 153, 197, 0.5294117647);
+}
+#root .game-container .modal.hidden {
+  display: none;
+}
+#root .game-container .modal div {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: center;
+  width: 400px;
+  text-align: center;
+  padding: 20px 25px;
+}
+#root .game-container .modal div button {
+  font-size: 13pt;
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #fbbe2f;
+  cursor: pointer;
+}
+#root .game-container .image-container {
+  width: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+#root .game-container .image-container h1 {
+  font-size: 20pt;
+  text-align: center;
+}
+#root .game-container .image-container .gallows {
+  width: 100%;
+}
+#root .game-container .image-container .human-container {
+  position: absolute;
+  top: 64px;
+  right: -8px;
+  width: 60px;
+  height: 138px;
+}
+#root .game-container .image-container .human-container .human-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#root .game-container .image-container .human-container .human-image > * {
+  position: absolute;
+  transition: opacity 0.4s ease;
+}
+#root .game-container .image-container .human-container .human-image .hidden {
+  opacity: 0;
+}
+#root .game-container .image-container .human-container .human-image .head {
+  width: 36px;
+  left: 13px;
+}
+#root .game-container .image-container .human-container .human-image .body {
+  width: 2.5px;
+  left: 29px;
+  top: 36px;
+}
+#root .game-container .image-container .human-container .human-image .hand-one {
+  width: 30px;
+  left: 0px;
+  top: 47px;
+}
+#root .game-container .image-container .human-container .human-image .hand-two {
+  width: 30px;
+  left: 30px;
+  top: 47px;
+}
+#root .game-container .image-container .human-container .human-image .leg-one {
+  width: 30px;
+  left: 0px;
+  top: 99px;
+}
+#root .game-container .image-container .human-container .human-image .leg-two {
+  width: 30px;
+  left: 29px;
+  top: 99px;
+}
+#root .game-container .game {
+  text-align: center;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+  font-weight: 600;
+}
+#root .game-container .game .hidden-string {
+  display: flex;
+  column-gap: 5px;
+}
+#root .game-container .game .hidden-string .letter {
+  border-bottom: 4px solid black;
+  min-width: 40px;
+  min-height: 50px;
+  font-size: 21pt;
+}
+#root .game-container .game .incorrect-count {
+  font-weight: 600;
+  color: red;
+}
+#root .game-container .game .virtual-keyboard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  row-gap: 5px;
+  max-width: 500px;
+}
+#root .game-container .game .virtual-keyboard button {
+  font-size: 15pt;
+  background-color: #5455ac;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: transform 0.4s ease, background-color 0.2s ease;
+}
+#root .game-container .game .virtual-keyboard button:disabled {
+  opacity: 0.5;
+}
+#root .game-container .game .virtual-keyboard button:hover {
+  transform: scale(1.05);
+}
+#root .game-container .game .virtual-keyboard button:active {
+  background-color: #3d3e86;
+}
+
+/*# sourceMappingURL=style.css.map */
