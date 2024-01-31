@@ -12,6 +12,7 @@
   align-items: center;
   min-height: 100dvh;
   padding: 25px 10px;
+  background-color: rgb(188, 236, 255);
 }
 #root .game-container {
   display: flex;
