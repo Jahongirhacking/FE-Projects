@@ -48,6 +48,67 @@ let hiddenWordArray = [];
 let foundWordArray = [];
 let numberOfFoundLetter = 0;
 
+// Create Game board
+document.body.innerHTML = `
+  <div id="root">
+    <div class="game-container">
+      <div id="modal" class="modal"></div>
+      <!-- Image Container -->
+      <section class="image-container">
+        <img class="gallows" src="./assets/gallows.png" alt="gallows image" />
+        <div class="human-container">
+          <div class="human-image">
+            <img
+              id="human-1"
+              class="head"
+              src="./assets/head.png"
+              alt="head image"
+            />
+            <img
+              id="human-2"
+              class="body"
+              src="./assets/body.png"
+              alt="body image"
+            />
+            <img
+              id="human-3"
+              class="hand-one"
+              src="./assets/hand-one.png"
+              alt="hand one image"
+            />
+            <img
+              id="human-4"
+              class="hand-two"
+              src="./assets/hand-two.png"
+              alt="hand two image"
+            />
+            <img
+              id="human-5"
+              class="leg-one"
+              src="./assets/leg-one.png"
+              alt="leg one image"
+            />
+            <img
+              id="human-6"
+              class="leg-two"
+              src="./assets/leg-two.png"
+              alt="leg two image"
+            />
+          </div>
+        </div>
+        <h1>HANGMAN GAME</h1>
+      </section>
+
+      <!-- Game Body -->
+      <article class="game">
+        <div class="hidden-string"></div>
+        <p>Hint: <span class="hint-message"></span></p>
+        <p>Incorrect guesses: <span class="incorrect-count"></span></p>
+        <div class="virtual-keyboard"></div>
+      </article>
+    </div>
+  </div>`;
+
 const humanImage = document.querySelector(".human-image");
 const hiddenString = document.querySelector(".hidden-string");
 const hintMessage = document.querySelector(".hint-message");
